@@ -134,3 +134,27 @@ section{
     background-size: cover;
     background-attachment:center;
 }
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var#999;
+     padding: 1rem 0;
+    line-height: 1.5;
+}
+
