@@ -121,3 +121,16 @@ header .fa-bars {
         font-size: 50%;
     }
 }
+
+section{
+    padding: 2rem, 9%;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(téléchargement.jpg) no-repeat;
+    background-size: cover;
+    background-attachment:center;
+}
