@@ -1,11 +1,10 @@
-:root{
+:root {
    --pink: #e84393;
 }
 
-
-*{
-     margin: 0;
-     padding: 0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     outline: none;
@@ -15,14 +14,14 @@
     transition: .2s linear;
 }
 
-html{
+html {
     font-size: 65.5%;
     scroll-padding-top: 6rem;
     overflow: hidden;
     scroll-behavior: smooth;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -36,105 +35,89 @@ header{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-header .logo{
+header .logo {
     font-size: 3rem;
     color: #333;
     font-weight: bolder;
 }
 
-header .logo span{
+header .logo span {
     color: var(--pink);
 }
 
-header .navbar a{
+header .navbar a {
     font-size: 2rem;
     padding: 0 1.5rem;
     color: #666;
-    
 }
 
-header .navbar a:hover{
+header .navbar a:hover {
     color: var(--pink);
 }
 
-header .icons a{
+header .icons a {
     font-size: 3rem;
-   margin-left: 1.5rem;
+    margin-left: 1.5rem;
     color: #333;
-    
 }
 
-header .icons a:hover{
+header .icons a:hover {
     color: var(--pink);
-
 }
 
-header #toggler{
+header #toggler {
     display: none;
 }
 
-header .fa-bars{
+header .fa-bars {
     font-size: 3rem;
     color: #333;
-    border-radius: .5rem ;
-    padding: 5rem 1.5rem;
+    border-radius: .5rem;
+    padding: 0.5rem 1.5rem; /* Réduit le padding */
     cursor: pointer;
-    border: 1rem solid rgba(0, 0, 0, 0.3) ;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3); /* Réduit l'épaisseur de la bordure */
     display: none;
 }
-
-
-
 
 @media (max-width: 991px) {
-
-html{
-    font-size: 55%;
-}
- 
-header{padding: 2rem;
-}
-
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
 }
 
-@media (max-width: 768px){
-    html .fa-bars{
+@media (max-width: 768px) {
+    header .fa-bars {
         display: block;
-
     }
 
-    header .navbar{
+    header .navbar {
         position: absolute;
-        top: 100%; left: 0; right: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: #eee;
         border-top: .1rem solid rgba(0, 0, 0, 0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-header #toggler:checked .navbar{
-    clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%); ;
-}
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
 
-
-
-     header .navbar a{
+    header .navbar a {
         margin: 1.5rem;
         padding: 1.5rem;
         background: #fff;
         border: .1rem solid rgba(0, 0, 0, 0.1);
-        display: block; 
-
-     }
+        display: block;
+    }
 }
 
 @media (max-width: 450px) {
-
-html{
-    font-size: 50%;
+    html {
+        font-size: 50%;
+    }
 }
- 
-
-
-}
-
-
