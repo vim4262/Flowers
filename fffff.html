@@ -1,0 +1,131 @@
+<div class="form-container">
+    <form action="#" method="POST" class="flower-form" id="orderForm">
+        <div class="form-header">
+            <h3><i class="fas fa-spa"></i> Commande Personnalisée</h3>
+            <p>Créez le bouquet parfait pour vos occasions spéciales</p>
+        </div>
+        
+        <!-- Section Client -->
+        <fieldset class="form-section">
+            <legend><i class="fas fa-user"></i> Vos coordonnées</legend>
+            
+            <div class="input-grid">
+                <div class="inputBox">
+                    <label for="name">Nom complet*</label>
+                    <input type="text" id="name" name="name" placeholder="ex: Marie Dubois" required
+                           pattern="[A-Za-zÀ-ÿ\s]{3,}" title="3 caractères minimum">
+                </div>
+                
+                <div class="inputBox">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="ex: contact@exemple.com" required>
+                </div>
+                
+                <div class="inputBox">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="ex: 06 12 34 56 78"
+                           pattern="[0-9]{10}" title="10 chiffres sans espace">
+                </div>
+            </div>
+        </fieldset>
+        
+        <!-- Section Fleurs -->
+        <fieldset class="form-section">
+            <legend><i class="fas fa-leaf"></i> Votre sélection</legend>
+            
+            <div class="flower-selection">
+                <div class="inputBox">
+                    <label for="flower-type">Type principal*</label>
+                    <select id="flower-type" name="flower-type" required>
+                        <option value="" disabled selected>Choisissez...</option>
+                        <option value="roses">Roses - À partir de 35€</option>
+                        <option value="tulipes">Tulipes - À partir de 25€</option>
+                        <option value="orchidees">Orchidées - À partir de 45€</option>
+                        <option value="mixed">Mélange saisonnier - À partir de 30€</option>
+                    </select>
+                </div>
+                
+                <div class="inputBox">
+                    <label for="color">Couleur dominante</label>
+                    <div class="color-options">
+                        <input type="radio" id="pink" name="color" value="pink" checked>
+                        <label for="pink" class="color-label pink" title="Rose"></label>
+                        
+                        <input type="radio" id="red" name="color" value="red">
+                        <label for="red" class="color-label red" title="Rouge"></label>
+                        
+                        <input type="radio" id="white" name="color" value="white">
+                        <label for="white" class="color-label white" title="Blanc"></label>
+                        
+                        <input type="radio" id="yellow" name="color" value="yellow">
+                        <label for="yellow" class="color-label yellow" title="Jaune"></label>
+                    </div>
+                </div>
+                
+                <div class="inputBox">
+                    <label for="size">Taille du bouquet</label>
+                    <select id="size" name="size">
+                        <option value="small">Petit (15-20 tiges) - 25-35€</option>
+                        <option value="medium" selected>Moyen (25-30 tiges) - 35-50€</option>
+                        <option value="large">Grand (40+ tiges) - 55-80€</option>
+                        <option value="luxury">Luxe (sur mesure) - 100€+</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        
+        <!-- Section Livraison -->
+        <fieldset class="form-section">
+            <legend><i class="fas fa-truck"></i> Livraison</legend>
+            
+            <div class="inputBox">
+                <label for="delivery-date">Date souhaitée*</label>
+                <input type="date" id="delivery-date" name="delivery-date" min="<?= date('Y-m-d', strtotime('+2 days')) ?>" required>
+            </div>
+            
+            <div class="inputBox">
+                <label for="address">Adresse complète</label>
+                <textarea id="address" name="address" placeholder="N° et rue, Code postal, Ville"></textarea>
+            </div>
+            
+            <div class="inputBox">
+                <label for="instructions">Instructions spéciales</label>
+                <input type="text" id="instructions" name="instructions" placeholder="ex: Sonner chez le voisin si absent">
+            </div>
+        </fieldset>
+        
+        <!-- Section Message -->
+        <fieldset class="form-section">
+            <legend><i class="fas fa-envelope"></i> Message d'accompagnement</legend>
+            
+            <div class="inputBox">
+                <label for="card-type">Type de carte</label>
+                <select id="card-type" name="card-type">
+                    <option value="standard">Standard (incluse)</option>
+                    <option value="premium">Carte premium (+3€)</option>
+                </select>
+            </div>
+            
+            <div class="inputBox">
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" placeholder="Écrivez votre mot doux..." maxlength="200"></textarea>
+                <small id="charCount">200 caractères restants</small>
+            </div>
+        </fieldset>
+        
+        <div class="form-footer">
+            <div class="inputBox checkbox">
+                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                <label for="newsletter">Recevoir nos offres spéciales et conseils d'entretien</label>
+            </div>
+            
+            <button type="submit" class="btn">
+                <i class="fas fa-paper-plane"></i> Finaliser la commande
+            </button>
+            
+            <p class="secure-notice">
+                <i class="fas fa-lock"></i> Paiement sécurisé - Nous ne partageons pas vos données
+            </p>
+        </div>
+    </form>
+</div>
