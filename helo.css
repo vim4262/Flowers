@@ -422,30 +422,31 @@ header .fa-bars {
     flex-direction: column;
 }
 
-.footer .footer-box .links a {
+.footer .box a {
     font-size: 1.5rem;
     color: var(--light-gray);
     padding: 0.8rem 0;
     transition: all 0.3s ease;
+    color: var(--pink);
 }
 
-.footer .footer-box .links a:hover {
+.footer .box  a:hover {
     color: var(--pink);
     padding-left: 1rem;
 }
 
-.footer .footer-box .links a i {
+.footer .box .a i {
     margin-right: 1rem;
     color: var(--pink);
 }
 
-.footer .footer-box .social-links {
+.footer .box .social-links {
     display: flex;
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
-.footer .footer-box .social-links a {
+.footer .box .social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -458,7 +459,7 @@ header .fa-bars {
     transition: all 0.3s ease;
 }
 
-.footer .footer-box .social-links a:hover {
+.footer .box .social-links a:hover {
     background: var(--pink);
     color: var(--light);
     transform: translateY(-0.5rem);
