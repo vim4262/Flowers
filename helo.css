@@ -447,52 +447,25 @@ header .fa-bars {
 
 
 /* Contact Section */
-.contact  .row{
-    display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 1.5rem;
-    align-items: center;
+.contact {
+    padding: 5rem 5%;
 }
 
-.contact .row form {
-    flex: 1 1 40rem;
-    padding: 2rem 2.5rem;
-    box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-    border: 1rem solid rgba(0, 0, 0, .1);
-    background: #fff;
-    background-repeat: #fff;
-    border-radius: .5rem;
+.contact form {
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.contact .row .image {
-    width: 100%;    
-}
-
-.contact .row .image img{
+.contact form .box {
     width: 100%;
-  
-    
+    padding: 1rem;
+    margin: 0.7rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-.contact .row form .box{
- padding: 1rem;
- font-size: 1.7rem;
- color: #333;
- text-transform: none;
- border: 1rem solid rgba(0, 0, 0, .1);
- border-radius: .5rem;
- margin: .7rem 0;
- width: 100%;
-}
-
-.contact .row form .box:focus {
-    border-color: var(--pink);
-}
-
-.contact .row form .textarea {
-    height: 15rem;
+.contact form textarea {
     resize: none;
 }
-
-
-
